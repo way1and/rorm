@@ -9,7 +9,7 @@ V 0.10
 2. Build redis service fastly, easily and directly.
 3. Manage your models in one way, reduce the complexity of your code.
 4. More convenient actions than raw redis client. --TODO
-<br/><br/>
+<br/><br/><br/><br/>
 
 ## How Redis Keys look like after using rorm?<br/>
 assuming that you have three model to store:
@@ -25,7 +25,7 @@ then the keys in redis will be:
 | ItemCount | item_count_<ItemCount.ItemID>| hash{ item_id: ItemCount.ItemID, ... }|
 
 that's clean and tidy.
-<br/><br/>
+<br/><br/><br/>
 <br/>
 ## Usage<br/>
  Add Your Model ( just like how to use gorm )<br/><br/>
