@@ -35,7 +35,7 @@ that's clean and tidy.
 </code>
 <br/>
 
-Set record (whether it exists or not)<br/><br/>
+Set record<br/><br/>
 <code>rdb.Set(&User{Name:"Jack", Mail:"jack@gmail.com", LoginCode:"code-113121"})<br/>
 &nbsp;// record has been added to redis server
 </code>
