@@ -12,7 +12,7 @@ V 0.10
 <br/><br/><br/><br/>
 
 ## How Redis Keys look like after using rorm?<br/>
-assuming that you have three model to store:
+assuming that you have two model to store:
 |Struct Name| Fields|
 |----|----|
 |AuthCode|Mail string, Code string, |
