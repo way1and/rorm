@@ -1,7 +1,14 @@
-## RORM An orm style redis key manager
+## RORM An orm style golang redis key manager
 V 0.10
 #### This package use [github.com/redis/go-redis/v9](https://github.com/redis/go-redis/v9) as redis client.
 #### Reference to [gorm](https://gorm.io/gorm)'s design specifications
+
+### Why use Rorm?<br/>
+1. Keep redis keys' name tidy.
+2. Build redis service fastly, easily and directly.
+3. Manage your models in one way, reduce the complexity of your code.
+4. More convenient actions than raw redis client. --TODO
+   
 ### Usage<br/>
  Add Your Model ( just like how to use gorm )<br/><br/>
 <code>client := redis.NewClient(&Option) // create your redis client<br/>
