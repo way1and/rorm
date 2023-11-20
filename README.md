@@ -19,7 +19,7 @@ Set record (whether it exists or not)<br/><br/>
 Get record <br/><br/>
 <code>query = &User{Name:"Jack"} // create query <br/>
 &nbsp;rdb.Get(&query) // get record<br/>
-&nbsp;fmt.Printf(query) // { Jack jack@gmai.com code-113121}
+&nbsp;fmt.Printf(query) // { Jack jack@gmail.com code-113121}
 </code>
 
 Delete record IncrBy ... see examples
