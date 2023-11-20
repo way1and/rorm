@@ -1,11 +1,10 @@
-module rorm
+module github.com/way1and/rorm
 
 go 1.21.1
 
 require (
 	github.com/redis/go-redis/v9 v9.3.0
 	github.com/spf13/cast v1.5.1
-
 )
 
 require (
