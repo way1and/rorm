@@ -24,7 +24,7 @@ Get record <br/><br/>
 
 Delete record IncrBy ... see examples
 
-#### For more detail and usage see [examples](./examples/example)
+#### For more detail and usage see [examples](/examples/example)
 
 ## Future
 1. add sync mode to keep sync with sql databases
