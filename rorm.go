@@ -2,8 +2,8 @@ package rorm
 
 import (
 	"github.com/redis/go-redis/v9"
-	"rorm/models"
-	"rorm/options"
+	"github.com/way1and/rorm/models"
+	"github.com/way1and/rorm/options"
 )
 
 func Open(redisClient *redis.Client, options ...options.Options) *DB {

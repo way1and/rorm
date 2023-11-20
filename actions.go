@@ -4,9 +4,9 @@ import (
 	"errors"
 	"github.com/redis/go-redis/v9"
 	types "github.com/spf13/cast"
+	"github.com/way1and/rorm/client"
+	"github.com/way1and/rorm/models"
 	"reflect"
-	"rorm/client"
-	"rorm/models"
 )
 
 type DB struct {

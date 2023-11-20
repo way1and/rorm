@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/redis/go-redis/v9"
-	"rorm"
+	"github.com/way1and/rorm"
 )
 
 const redisApi = "IP:PORT"

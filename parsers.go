@@ -2,9 +2,9 @@ package rorm
 
 import (
 	types "github.com/spf13/cast"
+	"github.com/way1and/rorm/models"
+	"github.com/way1and/rorm/tags"
 	"reflect"
-	"rorm/models"
-	"rorm/tags"
 	"strings"
 	"unicode"
 )
