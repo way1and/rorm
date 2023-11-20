@@ -18,7 +18,7 @@ var Client *redis.Client
 type AuthCode struct {
 	Mail       string `rorm:"key;name:mail;"` // set mail to be the ID
 	Code       string `rorm:"name:code;"`     // name code
-	VisitCount int    // not tag, default name: visit_count
+	VisitCount int    // when no tag it runs in a default mode -- name: visit_count
 	Test       string `rorm:"-"` // ignore this field
 }
 
