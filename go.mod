@@ -1,4 +1,4 @@
-module rorm
+module github.com/Way1and/rorm
 
 go 1.21.1
 
