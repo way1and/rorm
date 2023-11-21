@@ -1,8 +1,10 @@
 package tags
 
 const (
-	TagOptionName = "name" // 映射字段名
-	TagOptionSync = "sync" // 是否同步
-	TagOptionKey  = "key"  // 是否构成键
-	TagOptionType = "type" // 类型 int string bool
+	Omit  = "-"
+	Name  = "name"  // 映射字段名
+	Sync  = "sync"  // 是否同步
+	Key   = "key"   // 是否构成键
+	After = "after" // 过期时间
+	Type  = "type"  // 类型 int string bool
 )

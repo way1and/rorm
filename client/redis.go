@@ -17,13 +17,26 @@ func Get(client *redis.Client, key string) map[string]string {
 	return val
 }
 
+// GetEX 过期时间
+func GetEX(client *redis.Client, key string) time.Duration {
+	return client.TTL(ctx, key).Val()
+}
+
+// Exist 是否存在
+func Exist(client *redis.Client, key string) bool {
+	if client.Exists(ctx, key).Val() != 1 {
+		return false
+	}
+	return true
+}
+
 // 设置
 func set(client *redis.Client, key string, field string, v any) {
 	client.HSet(ctx, key, field, v)
 }
 
-// setEX 设置过期时间
-func setEX(client *redis.Client, key string, interval time.Duration) {
+// SetEX 设置过期时间
+func SetEX(client *redis.Client, key string, interval time.Duration) {
 	client.Expire(ctx, key, interval)
 }
 

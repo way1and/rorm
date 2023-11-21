@@ -1,5 +1,5 @@
-## Golang RORM - An ORM style redis keys tidy manager 
-V 0.10
+## Golang RORM - An ORM style redis keys tidy manager
+V 0.6.0
 #### This package use [github.com/redis/go-redis/v9](https://github.com/redis/go-redis/v9) as redis client.
 #### Reference to [gorm](https://gorm.io/gorm)'s design specifications
 <br/>
@@ -9,7 +9,7 @@ V 0.10
 2. Build redis service fastly, easily and directly.
 3. Manage your models in one way, reduce the complexity of your code.
 4. More convenient actions than raw redis client. --TODO
-<br/><br/><br/><br/>
+   <br/><br/><br/><br/>
 
 ## How Redis Keys look like after using rorm?<br/>
 assuming that you have two model to store:
@@ -28,7 +28,7 @@ that's clean and tidy.
 <br/><br/><br/>
 <br/>
 ## Usage<br/>
- Add Your Model ( just like how to use gorm )<br/><br/>
+Add Your Model ( just like how to use gorm )<br/><br/>
 <code>client := redis.NewClient(&Option) // create your redis client<br/>
 &nbsp;rdb := rorm.Open(client, nil) &nbsp; // init<br/>
 &nbsp;rdb.AppendModel(User)

@@ -7,13 +7,14 @@ import (
 	"github.com/way1and/rorm/client"
 	"github.com/way1and/rorm/models"
 	"reflect"
+	"time"
 )
 
 type DB struct {
 	Client  *redis.Client
 	Mapping map[string]*models.Model // 主键
 	Target  *models.Model
-	SyncDB  bool // 同步数据库 待开发
+	SyncDB  bool // 同步数据库
 }
 
 func (db *DB) Model(model interface{}) *DB {
@@ -25,6 +26,7 @@ func (db *DB) Model(model interface{}) *DB {
 	return db
 }
 
+// Get 获取值
 func (db *DB) Get(model interface{}) bool {
 	m := db.Mapping[parseStructToMappingK(model)]
 	key := parseStructToK(model, m)
@@ -54,11 +56,26 @@ func (db *DB) Get(model interface{}) bool {
 	return true
 }
 
+// Exist 是否存在 ( 只对比键 )
+func (db *DB) Exist(model interface{}) bool {
+	return client.Exist(db.Client, parseStructToMappingK(model))
+}
+
+// GetEX 获取过期时间
+func (db *DB) GetEX(model interface{}) time.Duration {
+	return client.GetEX(db.Client, parseStructToMappingK(model))
+}
+
 // Set 设置值
 func (db *DB) Set(model interface{}) bool {
 	m := db.Mapping[parseStructToMappingK(model)]
+
 	k, v := parseStructToKV(model, m)
-	return client.Sets(db.Client, k, v)
+	res := client.Sets(db.Client, k, v)
+	if m.Expire { // 设置过期时间
+		client.SetEX(db.Client, k, m.ExpireAfter)
+	}
+	return res
 }
 
 // IncrBy 更改值
